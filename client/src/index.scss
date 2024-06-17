@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(44, 44, 44) !important;
+  overflow-x: hidden;
+}
+
+@mixin wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.center {
+  @include center();
+}
+
+.video-card {
+  width: 100%; 
+  height: 100%;
+  .video-card-text {
+    font-size: 25px
+  }
+  .video-card-img {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+.wrapper {
+  @include wrapper();
+  @include center();
+  color: white;
+  gap: 15px;
+
+  input {
+    border-color: white;
+    color: white;
+  }
+}
+
+.material-symbols-outlined, a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.confirmation-alert {
+  z-index: 10;
+  width: 55%;
+  height: 55%;
+  border-radius: 50px;
+  background-color: bisque;
+  color: black;
+  @include center();
+  gap: 20px;
+  position: fixed;
+}
+
+.home-page {
+  width: 100vw; 
+  height: 100vh;
+  .home-page-videos {
+    width: 100%; 
+    height: 90%; 
+    padding: 30px;
+  }
+
+  .video-card-wrapper {
+    height: 25%;
+    width: 15%; 
+    cursor: pointer;
+  }
+}
+
+.video-page {
+  width: 100vw; 
+  min-height: 100vh; 
+  color: white;
+  display: flex; 
+  flex-direction: column; 
+  gap: 25px;
+
+  #video-title {
+    font-size: 60px; 
+    margin: 30px 10%;
+  }
+
+  .video-page-form {
+    display: flex; 
+    height: 35px; 
+    align-items: center; 
+    width: 80%;
+    margin: 0 auto;
+
+    input {
+      width: 30%; 
+      color: white;
+    }
+
+    button {
+      font-size: 25px;
+    }
+  }
+}
+
+.found-videos {
+  top: 10%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+  div {
+    font-size: 20px;
+    color: white;
+    border: grey 1px solid;
+    border-radius: 8px;
+    padding: 6px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.comment {
+  color: white;
+  width: 100%;
+  border: 1px solid white; 
+  border-radius: 6px;
+
+  h1 {
+    padding: 10px;
+  }
+}
+
+.comment-wrapper {
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px;
+  width: 80%; 
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.create-page {
+  padding-left: 30%;
+  align-items: start;
+  gap: 20px;
+  input {
+    border-color: white;
+    width: 50%;
+  }
+  .file-button {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    width: 30%;
+    background-color: coral;
+    border-radius: 6px;
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+      padding: 4px 6px;
+      width: 45%;
+    }
+  }
+  .create-video-button {
+    width: 15%;
+    font-size: 20px;
+    @media screen and (max-width: 800px) {
+      width: 25%;
+      font-size: 15px;
+    }
+  }
+  .file-buttons-group {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.profile-page {
+  width: 100vw;
+  min-height: 100vh;
+
+  .my-videos {
+    width: 80%;
+    min-height: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .my-video {
+      height: 40%;
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        height: 55%;
+        width: 55%;
+        border-radius: 30px;
+      }
+      border: 1px solid rgb(66, 66, 255);
+      border-radius: 15px;
+      color: white;
+    }
+  }
+}
+
+.video-editor {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 20%;
+  }
+}
+.auth-page {
+  h1 {
+    font-size: 30px;
+  }
+  input {
+    width: 30%;
+  }
+  .auth-buttons {
+    width: 30%;
+    button {
+      width: 50%;
+    }
+  }
+}
+
+.reviews-box {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.search {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.search-input {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .search-text-field {
+    width: 75%;
+    height: 60%;
+    color: white;
+  }
+
+  .search-button {
+    width: 25%;
+    height: 60%;
+  }
+}
